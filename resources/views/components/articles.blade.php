@@ -1,25 +1,27 @@
 <section class="fourth-sec">
     <img class="waves-3" src="img/waves-3.png" alt="waves">
     <div class="container d-flex justify-content-center position-relative">
-        <h1>Soyez informés des dernières actualités</h1>
+        <h1 class="title">Soyez informés des dernières actualités</h1>
     </div>
     <div class="actualites-carousel container">
         @foreach ($cards as $card)
-            <div class="cards">
-                <div class="articles">
-                    <div class="img-contain d-flex justify-content-center">
-                        <img class="card-image" src="{{ Voyager::image($card->card_img) }}" alt="Card image cap">
-                    </div>
-                    <div class="card-content">
-                        <div class="article-details d-flex justify-content-between">
-                            <p>{{ $card->card_date }}</p>
-                            <p>{{ $card->card_creator }}</p>
+            <a class="card-link" href="{{route('card.show', $card->id)}}">
+                <div class="cards d-flex justify-content-center">
+                    <div class="articles">
+                        <div class="img-contain d-flex justify-content-center">
+                            <img class="card-image" src="{{ Voyager::image($card->card_img) }}" alt="Card image cap">
                         </div>
-                        <h3 class="card-title">{{ $card->card_title }}</h3>
-                        <h4 class="card-text">{{ $card->card_description }}</h4>
+                        <div class="card-content">
+                            <div class="article-details d-flex justify-content-between">
+                                <p>{{ $card->card_date }}</p>
+                                <p>{{ $card->card_creator }}</p>
+                            </div>
+                            <h3 class="card-title">{{ $card->card_title }}</h3>
+                            <h4 class="card-text">{{ $card->card_description }}</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 </section>

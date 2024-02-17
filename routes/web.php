@@ -42,16 +42,18 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/qui_sommes_nous', [ProposController::class, 'index']);
 Route::get('mot_du_president', [ProposController::class, 'mot']);
+Route::get('actualites', [ProposController::class, 'actualite']);
+Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.show');
 Route::get('/contact', function(){
     return view('contact.index');
 })->name('contact');
 
-Route::get('oni/{slug}', [MarqueController::class, 'oni']);
-Route::get('hance/{slug}', [MarqueController::class, 'hance']);
-Route::get('drem/{slug}', [MarqueController::class, 'drem']);
-Route::get('lelas/{slug}', [MarqueController::class, 'lelas']);
+// Route::get('oni/{slug}', [MarqueController::class, 'oni']);
+// Route::get('hance/{slug}', [MarqueController::class, 'hance']);
+// Route::get('drem/{slug}', [MarqueController::class, 'drem']);
+// Route::get('lelas/{slug}', [MarqueController::class, 'lelas']);
 
 // Route::get('/{slug}/{child_slug}', [ CMSController::class , 'index' ])->name('pages.show');
 // Route::get('/{slug}', [ CMSController::class , 'show' ])->name('pages.show');
 
-Route::get('/{slug}', [ CMSController::class , 'index' ])->name('pages.show');
+Route::get('/{slug}', [ CMSController::class , 'index' ]);

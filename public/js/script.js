@@ -1,24 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            document.querySelector(".page-header").classList.add("active");
-            document.querySelectorAll(".header-link").forEach(function (link) {
-                link.style.color = "#312783";
-            });
-            document.querySelector(".logo").src = "/img/logo-color.png";
-            document.querySelector(".logo").style.width = "40%";
-        } else {
-            document.querySelector(".page-header").classList.remove("active");
-            document
-                .querySelector(".page-header")
-                .classList.remove("active-link");
-            document.querySelector(".logo").src = "/img/logo-mono.png";
-            document.querySelector(".logo").style.width = "65%";
-            document.querySelectorAll(".header-link").forEach(function (link) {
-                link.style.color = "";
-            });
-        }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if it's the home page
+    if (window.location.pathname === "/") {
+        document.querySelector(".logo").src = "/img/logo-mono.png";
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+                document
+                    .querySelector(".page-header")
+                    .classList.add("active");
+                document
+                    .querySelectorAll(".header-link")
+                    .forEach(function (link) {
+                        link.style.color = "#312783";
+                    });
+                document.querySelector(".logo").src = "/img/logo-color.png";
+                document.querySelector(".logo").style.width = "40%";
+            } else {
+                document
+                    .querySelector(".page-header")
+                    .classList.remove("active");
+                document
+                    .querySelector(".page-header")
+                    .classList.remove("active-link");
+                document.querySelector(".logo").src = "/img/logo-mono.png";
+                document.querySelector(".logo").style.width = "65%";
+                document
+                    .querySelectorAll(".header-link")
+                    .forEach(function (link) {
+                        link.style.color = "";
+                    });
+            }
+        });
+    } else {
+        document.querySelector(".page-header").classList.add("active");
+        document.querySelector(".logo").src = "/img/logo-color.png";
+        document.querySelectorAll(".header-link").forEach(function (link) {
+            link.style.color = "#312783";
+        });
+        document.querySelector(".logo").style.width = "40%";
+    }
 });
 
 $(".actualites-carousel").slick({
@@ -27,9 +46,23 @@ $(".actualites-carousel").slick({
     slidesToScroll: 3,
     prevArrow: "<button type='button' class='slick-prev slick-arrow'></button>",
     nextArrow: "<button type='button' class='slick-next slick-arrow'></button>",
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+    ],
 });
-
-
 
 if ($(".brand-slider").length) {
     $(".brand-slider").slick({
@@ -48,32 +81,25 @@ if ($(".brand-slider").length) {
         centerMode: true,
         responsive: [
             {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 6,
-                },
-            },
-            {
-                breakpoint: 768,
+                breakpoint: 972,
                 settings: {
                     slidesToShow: 5,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 500,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 },
             },
         ],
     });
 }
-
 
 new PureCounter();

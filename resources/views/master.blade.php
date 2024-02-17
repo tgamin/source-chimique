@@ -25,7 +25,7 @@
     <!-- The header partial -->
     @include('partials.header')
     
-        @yield('content')
+    @yield('content')
 
     <!-- The footer partial -->
     @include('partials.footer')

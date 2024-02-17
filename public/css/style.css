@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
     --dark_blue: #312783;
@@ -10,6 +11,13 @@
 * {
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 500;
 }
 
 .page-header {
@@ -27,6 +35,7 @@
 
 .dropdown-menu {
     background-color: rgba(60, 59, 80, 0.6);
+    width: 240px;
     left: 30px;
     border: none;
     border-radius: 0 6px 8px 8px;
@@ -41,8 +50,8 @@
     .navbar .nav-item .dropdown-menu {
         display: none;
     }
-    .navbar .nav-item:hover .nav-link {
-    }
+    /* .navbar .nav-item:hover .nav-link {
+    } */
     .navbar .nav-item:hover .dropdown-menu {
         display: block;
     }
@@ -53,6 +62,7 @@
 
 .active {
     background-color: white;
+    color: var(--dark_blue);
 }
 
 .active-link {
@@ -67,6 +77,7 @@
 .hero-image {
     position: relative;
     height: 750px;
+    margin-top: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,8 +129,8 @@
 
 .hero-text-container h1 {
     margin-top: 15%;
-    /* font-size: 3.1rem; */
-    font-size: 3.6vw;
+    /* font-size: 3.6vw; */
+    font-size: 23px;
 }
 
 .hero-text-container h2 {
@@ -178,16 +189,11 @@ a.nav-link.dropdown-toggle.header-link {
 }
 
 .sec-img {
-    height: 90%;
-    /* width: 92%; */
+    /* width: 70%;
+    height: auto; */
     width: auto;
-    /* aspect-ratio: 4/5; */
-    /* object-fit: cover;
-    border: 9px solid white;
-    border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    height: 530px;
 }
-
 
 .sec-content {
     height: 550px;
@@ -199,8 +205,9 @@ a.nav-link.dropdown-toggle.header-link {
 }
 
 .section-text h1 {
+    font-family: "Rubik", sans-serif;
     margin-top: 10%;
-    font-weight: 700;
+    font-weight: 600;
     /* font-size: 3.1rem; */
     color: var(--dark_blue);
     font-size: 2vw;
@@ -228,19 +235,28 @@ a.nav-link.dropdown-toggle.header-link {
 
 .section-title {
     color: var(--dark_blue);
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 1.8rem;
     margin-top: 1.3rem;
 }
 
 .paragraph-container p {
-    font-size: 0.8em;
-    line-height: 2;
+    font-size: 16px;
+    line-height: 1.7;
     font-weight: 500;
     margin-top: 1.3rem;
 }
 
-.section-link , .paragraph-container a {
+/* .left-p {
+    padding-left: 170px;
+}
+
+.right-p {
+    padding-right: 180px;
+} */
+
+.section-link,
+.paragraph-container a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -318,7 +334,7 @@ a.nav-link.dropdown-toggle.header-link {
 }
 
 .fourth-sec {
-    height: 755px;
+    /* height: 755px; */
     position: relative;
 }
 
@@ -331,23 +347,32 @@ a.nav-link.dropdown-toggle.header-link {
     width: 100%;
 }
 
-.fourth-sec h1 {
-    margin: 8% 0;
+.title {
+    margin: 22px 0;
     font-weight: 700;
     /* font-size: 3.1rem; */
     color: var(--dark_blue);
     font-size: 2vw;
 }
 
-.cards {
-    height: 450px;
-    margin: 0 15px;
+.card-link {
+    text-decoration: none;
 }
+
+.cards {
+    height: auto;
+    margin: 15px;
+}
+
+/* .card {
+    height: 24rem;
+} */
 
 .img-contain {
     height: 212px;
+    /* min-width: 294px; */
     background-color: #6b6b6c;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -359,8 +384,9 @@ a.nav-link.dropdown-toggle.header-link {
 
 .articles {
     background-color: white;
-    height: 430px;
-    width: auto;
+    /* height: 430px; */
+    height: auto;
+    width: 95%;
     border-radius: 25px 25px 10px 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -372,14 +398,14 @@ a.nav-link.dropdown-toggle.header-link {
 .card-content h3 {
     font-size: 22px;
     margin: 10px 0;
-    color: var(--orange);
+    color: var(--dark_blue);
 }
 
 .card-content h4 {
-    margin-top: 22px;
+    margin-top: 5px;
     font-size: 18px;
-    font-weight: 600;
-    color: var(--orange);
+    font-weight: 500;
+    color: rgb(36, 36, 36);
 }
 
 .card-content p {
@@ -387,6 +413,25 @@ a.nav-link.dropdown-toggle.header-link {
     font-size: 12px;
     color: #bfb8b0;
     margin-right: 14px;
+}
+
+.card-span {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #bfb8b0;
+}
+
+.card-title {
+    font-size: 22px;
+    margin: 10px 0;
+    color: var(--dark_blue);
+}
+
+.card-text {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--orange);
 }
 
 .actualites-carousel {
@@ -401,6 +446,7 @@ a.nav-link.dropdown-toggle.header-link {
     border: none;
     z-index: 999;
     transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
 }
 
 .actualites-carousel .slick-arrow.slick-prev {
@@ -412,17 +458,52 @@ a.nav-link.dropdown-toggle.header-link {
     background: url("../img/right-arrow-dark.svg") 0 0 / 100% no-repeat;
 }
 
+@media (max-width: 1240px) {
+    .actualites-carousel .slick-arrow.slick-prev {
+        left: 0;
+    }
+    .actualites-carousel .slick-arrow.slick-next {
+        right: -2rem;
+    }
+}
+@media (max-width: 700px) {
+    .actualites-carousel .slick-arrow.slick-prev {
+        left: 1rem;
+    }
+    .actualites-carousel .slick-arrow.slick-next {
+        right: -2rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .actualites-carousel .slick-arrow.slick-prev {
+        left: 1rem;
+    }
+    .actualites-carousel .slick-arrow.slick-next {
+        right: -1.3rem;
+    }
+    .brand-slider {
+        margin: 0;
+    }
+    .title {
+        margin: 24px 0;
+        font-weight: 700;
+        color: var(--dark_blue);
+        font-size: 15px;
+    }
+}
+
 .brand-slider {
-    height: 267px;
+    margin: 40px 0;
 }
 
 .brand-slide {
-    height: 5rem;
-    margin: 40% 0;
+    height: 70px;
+    /* margin: 40% 0; */
 }
 
 footer {
-    height: 450px;
+    /* height: 450px; */
 }
 
 .footer-container {

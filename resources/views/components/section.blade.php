@@ -1,9 +1,5 @@
 @php
-    $sections = $page
-        ->sections()
-        ->active()
-        ->orderBy('order')
-        ->get();
+    $sections = $page->sections()->active()->orderBy('order')->get();
 @endphp
 
 {{-- <div class="container">
@@ -17,8 +13,14 @@
     @endphp
 
     @if ($page->slug == 'home')
+        @section('css')
+            <style>
+                @media (max-width:1200px) {
+                    .sec-img {}
+                }
+            </style>
+        @endsection
         <section class="second-sec" style="background-image: url('/img/sunlight.png');">
-
             <div class="sec-content row container">
                 <div class="image-container col-6 justify-content-center">
                     <img class="sec-img " src="{{ Voyager::image($section->image) }}" alt="">
@@ -52,7 +54,7 @@
                 }
 
                 section.container {
-                    height: 35rem;
+                    /* height: 35rem; */
                     margin-top: 3rem;
                 }
 
@@ -66,19 +68,28 @@
                 }
 
                 .left-img .sec-img {
-                    margin-left: 5rem;
-                    position: absolute;
-                    right: 20px;
-                    height: 95%;
+                    margin-left: 2rem;
+                    /* position: absolute; */
+                    height: 600px;
                     width: auto;
+                    position: sticky;
+                    top: 80px;
                 }
 
                 .right-img .sec-img {
-                    margin-left: 5rem;
-                    position: absolute;
-                    left: -3rem;
-                    height: 95%;
+                    height: 600px;
                     width: auto;
+                    position: sticky;
+                    top: 80px;
+                }
+
+                @media(max-width:520px) {
+
+                    .right-img .sec-img,
+                    .left-img .sec-img {
+                        height: 410px;
+                    }
+
                 }
 
                 .waves {
@@ -94,70 +105,33 @@
         @endsection
         @if ($section->type == 'img-right')
             <section class="right-img container d-flex">
-                <div class="left-content col-md-6">
-                    <h1 class="section-title">{{ $section->title }}</h1>
-                    <div class="paragraph-container">
-                        {!! $section->content !!}
+                <div class="row">
+                    <div class="left-content col-md-6">
+                        <h1 class="section-title">{{ $section->title }}</h1>
+                        <div class="paragraph-container left-p">
+                            {!! $section->content !!}
+                        </div>
                     </div>
-                </div>
-                <div class="img-container col-md-6">
-                    <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
+                    <div class="img-container col-md-6 d-flex justify-content-start">
+                        <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
+                    </div>
                 </div>
             </section>
         @endif
         @if ($section->type == 'img-left')
-            <section class="left-img container d-flex">
-                <div class="img-container col-md-6">
-                    <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
-                </div>
-                <div class="col-md-6">
-                    <h1 class="section-title">{{ $section->title }}</h1>
-                    <div class="paragraph-container">
-                        {!! $section->content !!}
+            <section class="left-img container">
+                <div class="row">
+                    <div class="img-container col-md-6 d-flex justify-content-end">
+                        <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="section-title">{{ $section->title }}</h1>
+                        <div class="paragraph-container right-p">
+                            {!! $section->content !!}
+                        </div>
                     </div>
                 </div>
             </section>
         @endif
     @endif
-
-    {{-- <section class="my-5 cms-block">
-        <div class="container">
-            <div class="row ">
-                @if ($section->type == 'img-right')
-                    <div class="col-md-6 pe-5 cms-content">
-                        <h3>{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h3>
-                        {!! $output !!}
-                    </div>
-                    <div class="col-md-6 img img-right"
-                        style="background-image: url({{ Voyager::image($section->image) }})">
-                        @if ($page->slug == 'a-propos')
-                            <div class="time-line">
-                                @foreach (getTimeLine() as $time_line)
-                                    <div>
-                                        <div class="card-time-line">
-                                            <img src="{{ Storage::url($time_line->image) }}" alt="">
-                                            <h2>
-                                                {{ $time_line->title }}
-                                                <p>{{ $time_line->subtitle }}</p>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        @endif
-                    </div>
-                @endif
-
-                @if ($section->type == 'img-left')
-                    <div class="col-md-6 img img-left"
-                        style="background-image: url({{ Voyager::image($section->image) }})">
-                    </div>
-                    <div class="col-md-6 ps-5 cms-content">
-                        <h3>{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h3>
-                        {!! $output !!}
-                    </div>
-                @endif
-            </div>
-        </div>
-    </section> --}}
 @endforeach

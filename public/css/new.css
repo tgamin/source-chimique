@@ -31,10 +31,10 @@
 }
 
 section.container {
-  height: 35rem;
+  /* height: 35rem; */
   /* border: 1px solid red; */
   margin-top: 3rem;
-  /* margin-bottom: 12rem; */
+  margin-bottom: 2rem;
 }
 
 .left-img,
@@ -43,28 +43,25 @@ section.container {
 }
 
 .sec-img {
-  width: 440px;
+  /* width: 440px; */
 }
 
 .left-img .sec-img {
-  margin-left: 5rem;
-  position: absolute;
-  right: 20px;
-  height: 95%;
+  height: 600px;
   width: auto;
+  position: sticky;
+  top: 100px;
 }
 
 .right-img .sec-img {
   margin-left: 5rem;
-  position: absolute;
-  left: -3rem;
-  height: 95%;
-  width: auto;
+  height: auto;
+  width: 70%;
 }
 
 .section-title {
   color: var(--dark_blue);
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   margin-top: 1.3rem;
 }

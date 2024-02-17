@@ -21,13 +21,13 @@
                     </div>
 
                     <div class="col-md-6  ps-md-5 pt-md-4 cms-block">
-                        <h3 class="mb-4 ">{{ __('contact.formulare_title') }}</h3>
+                        <h3 class="mb-4 ">Contact formulaire</h3>
                         <form>
                             <div class="row ">
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="text" class="form-control" id="fullName"
-                                        placeholder="{{ __('contact.input_fullname	') }}">
-                                    <label for="floatingInput">{{ __('contact.input_fullname') }}</label>
+                                        placeholder="contact fullname">
+                                    <label for="floatingInput">fullname</label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-floating  col-md-6 mb-3">
@@ -57,7 +57,7 @@
                             </div>
 
                             <button type="submit"
-                                class="btn btn-primary text-white contact-button">{{ __('contact.contatc_button') }}</button>
+                                class="btn btn-primary text-white contact-button">Send</button>
                         </form>
 
                     </div>
