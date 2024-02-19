@@ -502,10 +502,6 @@ a.nav-link.dropdown-toggle.header-link {
     /* margin: 40% 0; */
 }
 
-footer {
-    /* height: 450px; */
-}
-
 .footer-container {
     position: relative;
     top: 35%;
@@ -542,7 +538,7 @@ footer ul li {
 
 .footer-bg {
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
 }
 
@@ -559,4 +555,17 @@ footer ul li {
     color: white;
     text-decoration: none;
     margin-bottom: 0;
+}
+
+.copyright-area {
+    background-color: var(--orange);
+}
+
+.copyright-text p {
+    color: white;
+    margin: 32px;
+}
+
+footer.footer-section {
+    background-color: var(--dark_blue);
 }

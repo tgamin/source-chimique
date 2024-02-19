@@ -103,6 +103,7 @@
                 /* end new css */
             </style>
         @endsection
+        
         @if ($section->type == 'img-right')
             <section class="right-img container d-flex">
                 <div class="row">
