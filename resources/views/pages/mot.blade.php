@@ -5,30 +5,14 @@
 @endsection
 
 @section('content')
-    <section id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <div class="carousel-item active hero-image" style="background-image: url('/img/bg-2.jpg'); height: 750px;">
 
-                <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
+    <div class="hero-image" style="background-image: url('{{ Voyager::image($page->cover) }}'); height: 750px;">
+        <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
+    </div>
 
-                <div class="hero-text-container justify-content-center container">
+    @include('components.section',[$page])
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- @include('components.section',[$page]) --}}
-
-    <section class="mot left-img container d-flex">
+    {{-- <section class="mot left-img container d-flex">
         <div class="row">
             <div class="img-container col-md-6 d-flex justify-content-center">
                 <img class="sec-img" src="/img/img4.png" alt="">
@@ -79,5 +63,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

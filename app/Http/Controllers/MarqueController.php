@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 class MarqueController extends Controller
 {
     public function oni() {
-        
-        // $page = Page::active()->whereTranslation('slug',$slug)->firstOrFail();
         $cards = Card::all();
         $brands = Brand::all();
         return view('marques.oni', compact('page', 'cards', 'brands'));

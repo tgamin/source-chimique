@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Frontend\CMSController;
-use App\Http\Controllers\MarqueController;
 use App\Http\Controllers\ProposController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -47,11 +46,6 @@ Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.sho
 Route::get('/contact', function(){
     return view('contact.index');
 })->name('contact');
-
-// Route::get('oni/{slug}', [MarqueController::class, 'oni']);
-// Route::get('hance/{slug}', [MarqueController::class, 'hance']);
-// Route::get('drem/{slug}', [MarqueController::class, 'drem']);
-// Route::get('lelas/{slug}', [MarqueController::class, 'lelas']);
 
 // Route::get('/{slug}/{child_slug}', [ CMSController::class , 'index' ])->name('pages.show');
 // Route::get('/{slug}', [ CMSController::class , 'show' ])->name('pages.show');

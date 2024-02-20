@@ -1,11 +1,13 @@
 @extends('master')
 @section('content')
-    <div class="hero-image" style="background-image: url('/img/bg-2.jpg'); height: 750px;">
+    {{-- <div class="hero-image" style="background-image: url('/img/bg-2.jpg'); height: 750px;">
+        <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
+    </div> --}}
+    <div class="hero-image" style="background-image: url('{{ Voyager::image($page->cover) }}'); height: 750px;">
         <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
     </div>
 
     <section class="fourth-sec">
-        {{-- <img class="waves-3" src="img/waves-3.png" alt="waves"> --}}
         <div class="container d-flex justify-content-center position-relative">
             <h1 class="title">Actualités</h1>
         </div>

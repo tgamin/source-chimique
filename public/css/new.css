@@ -2,6 +2,7 @@
 
 :root {
   --dark_blue: #312783;
+  --light_blue: #1d70b7;
   --orange: #e94e1a;
   --dark_orange: #b32d00;
   --white: #ffffff;
@@ -60,7 +61,7 @@ section.container {
 }
 
 .section-title {
-  color: var(--dark_blue);
+  color: var(--light_blue);
   font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   margin-top: 1.3rem;
