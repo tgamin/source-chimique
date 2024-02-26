@@ -36,8 +36,13 @@ class ProposController extends Controller
     }
     
     public function show($id) {
-        $card =Card::find($id);
-        return 'test';
+        $slug = 'article';
+        $article =Card::find($id);
+        $cards =Card::all();
+        $page = Page::where('slug', $slug)->firstOrFail();
+        $brands =Brand::all();
+
+        return view('pages.detail-actualite', compact('article', 'cards', 'page', 'brands'));
     }
 
 }

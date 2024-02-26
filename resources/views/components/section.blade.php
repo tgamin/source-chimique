@@ -15,9 +15,7 @@
     @if ($page->slug == 'home')
         @section('css')
             <style>
-                @media (max-width:1200px) {
-                    .sec-img {}
-                }
+
             </style>
         @endsection
         <section class="second-sec" style="background-image: url('/img/sunlight.png');">
@@ -26,7 +24,7 @@
                     <img class="sec-img " src="{{ Voyager::image($section->image) }}" alt="">
                 </div> --}}
                 <img class="sec-img col-6" src="{{ Voyager::image($section->image) }}" alt="">
-                <div class="section-text col-6">
+                <div class="section-text col-md-6">
 
                     <h1 class="text-start">{{ $section->title }}</h1>
 
@@ -65,6 +63,7 @@
 
                 .sec-img {
                     width: 440px;
+                    margin-top: 0px;
                 }
 
                 .left-img .sec-img {
@@ -84,11 +83,22 @@
                     top: 80px;
                 }
 
-                @media(max-width:520px) {
+                @media(max-width: 575px) {
 
                     .right-img .sec-img,
                     .left-img .sec-img {
-                        height: 410px;
+                        height: 400px;
+                        margin-left: 0;
+                    }
+
+                }
+
+                @media(max-width: 1082px) {
+
+                    .right-img .sec-img,
+                    .left-img .sec-img {
+                        height: 400px;
+                        margin-left: 0;
                     }
 
                 }

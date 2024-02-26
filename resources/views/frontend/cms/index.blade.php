@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="hero-image" style="background-image: url('{{ Voyager::image($page->cover) }}'); height: 750px;">
+    <div class="hero-image" style="background-image: url('{{ Voyager::image($page->cover) }}')">
         <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
     </div>
 

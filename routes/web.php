@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Frontend\CMSController;
+use App\Http\Controllers\frontend\CMSController;
 use App\Http\Controllers\ProposController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -43,11 +43,11 @@ Route::get('/qui_sommes_nous', [ProposController::class, 'index']);
 Route::get('mot_du_president', [ProposController::class, 'mot']);
 Route::get('actualites', [ProposController::class, 'actualite']);
 Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.show');
-Route::get('/contact', function(){
+Route::get('/contact', function () {
     return view('contact.index');
 })->name('contact');
 
 // Route::get('/{slug}/{child_slug}', [ CMSController::class , 'index' ])->name('pages.show');
 // Route::get('/{slug}', [ CMSController::class , 'show' ])->name('pages.show');
 
-Route::get('/{slug}', [ CMSController::class , 'index' ]);
+Route::get('/{slug}', [CMSController::class, 'index']);
