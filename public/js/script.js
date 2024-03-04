@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Check if it's the home page
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/fr" || window.location.pathname === "/en") {
         document.querySelector(".logo").src = "/img/logo-mono.png";
         window.addEventListener("scroll", function () {
             if (window.scrollY > 50) {

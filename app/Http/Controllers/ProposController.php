@@ -26,6 +26,14 @@ class ProposController extends Controller
         return view('pages.mot', compact('heros','page'));
     }
     
+    public function implantation() {
+        $slug = 'implantation';
+        
+        $page = Page::where('slug', $slug)->firstOrFail();
+        $heros = Carousel::all();
+        return view('pages.mot', compact('heros','page'));
+    }
+    
     public function actualite() {
         $slug = 'actualites';
         

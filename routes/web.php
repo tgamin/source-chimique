@@ -3,8 +3,9 @@
 use App\Http\Controllers\frontend\CMSController;
 use App\Http\Controllers\ProposController;
 use App\Http\Controllers\SiteController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
-
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,16 +39,33 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/', [SiteController::class, 'index']);
-Route::get('/qui_sommes_nous', [ProposController::class, 'index']);
-Route::get('mot_du_president', [ProposController::class, 'mot']);
-Route::get('actualites', [ProposController::class, 'actualite']);
-Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.show');
-Route::get('/contact', function () {
-    return view('contact.index');
-})->name('contact');
+// Route::get('/', function () {
+//     return redirect(app()->getLocale());
+// });
+
+// Route::group([
+//     'prefix' => '{locale}',
+//     'middleware' => 'setLocale'
+// ], function () {
+// });
+
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+], function () {
+    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+
+    Route::get('/', [SiteController::class, 'index']);
+    Route::get('qui_sommes_nous', [ProposController::class, 'index']);
+    Route::get('implantation', [ProposController::class, 'implantation']);
+    Route::get('mot_du_president', [ProposController::class, 'mot']);
+    Route::get('actualites', [ProposController::class, 'actualite']);
+    Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.show');
+    Route::get('contact', function () {
+        return view('contact.index');
+    })->name('contact');
+    Route::get('/{slug}', [CMSController::class, 'index']);
+});
 
 // Route::get('/{slug}/{child_slug}', [ CMSController::class , 'index' ])->name('pages.show');
 // Route::get('/{slug}', [ CMSController::class , 'show' ])->name('pages.show');
-
-Route::get('/{slug}', [CMSController::class, 'index']);
