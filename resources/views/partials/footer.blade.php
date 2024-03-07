@@ -45,7 +45,7 @@
                 <div class="col-xl-3 col-lg-3 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="/"><img src="img/logo-mono.png" class="img-fluid" alt="logo"></a>
+                            <a href="/"><img src="{{asset('img/logo-mono.png')}}" class="img-fluid" alt="logo"></a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    <img class="footer-bg" src="img/footer-bg.png" alt="">
+    <img class="footer-bg" src="{{asset('img/footer-bg.png')}}" alt="">
     <div class="copyright-area">
         <div class="container">
             <div class="row">

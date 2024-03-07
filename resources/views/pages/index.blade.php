@@ -10,40 +10,6 @@
 @endsection
 
 @section('content')
-    {{-- <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            @foreach ($heros as $hero)
-                <div class="carousel-item active hero-image"
-                    style="background-image: url('{{ Voyager::image($hero->carousel_img) }}'); height: 750px;">
-                    <img class="waves" src="/img/waves.png" alt="waves">
-                    <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
-
-                    <div class="hero-text-container justify-content-center container">
-
-                        <h1 class="text-white text-start">{{ $hero->carousel_title }}</h1>
-
-                        <h2 class="text-white text-start">{{ $hero->carousel_p }}</h2>
-
-                        <a href="#">En savoir plus <svg class="small-arrow" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px">
-                                <image x="0px" y="0px" width="12px" height="12px"
-                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDBoQGAyqSqxiAAAAXklEQVQY073QMRGEMBgF4R0URMJJ+KUgIY4iIRJOSgYF4ADqbUKT4Y6Wgld+2z1sVgDD1eA3q90Khrv7C6lc6TMNTgSwAEFi4xhss5vBbLeZHjBcPN8YLOZxyfePOQHRxXr4by8N/QAAAABJRU5ErkJggg==">
-                                </image>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div> --}}
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -60,13 +26,13 @@
                         <!-- hero-subtitle -->
                         <h2 class="text-white text-start">{{ $hero->carousel_p }}</h2>
                         <!-- hero link -->
-                        <a href="#">En savoir plus <svg class="small-arrow" xmlns="http://www.w3.org/2000/svg"
+                        {{-- <a href="#">En savoir plus <svg class="small-arrow" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px">
                                 <image x="0px" y="0px" width="12px" height="12px"
                                     xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDBoQGAyqSqxiAAAAXklEQVQY073QMRGEMBgF4R0URMJJ+KUgIY4iIRJOSgYF4ADqbUKT4Y6Wgld+2z1sVgDD1eA3q90Khrv7C6lc6TMNTgSwAEFi4xhss5vBbLeZHjBcPN8YLOZxyfePOQHRxXr4by8N/QAAAABJRU5ErkJggg==">
                                 </image>
                             </svg>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             @endforeach
@@ -127,4 +93,7 @@
 
 @push('scripts')
     <script src="js/purecounter/purecounter_vanilla.js"></script>
+    <script>
+        new PureCounter();
+    </script>
 @endpush

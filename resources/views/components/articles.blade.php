@@ -1,5 +1,5 @@
 <section class="fourth-sec">
-    <img class="waves-3" src="img/waves-3.png" alt="waves">
+    <img class="waves-3" src="{{asset('img/waves-3.png')}}" alt="waves">
     <div class="container d-flex justify-content-center position-relative mt-3">
         <h1 class="title">Soyez informés des dernières actualités</h1>
     </div>

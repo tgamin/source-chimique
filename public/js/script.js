@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Check if it's the home page
-    if (window.location.pathname === "/fr" || window.location.pathname === "/en") {
+    if (
+        window.location.pathname === "/fr" ||
+        window.location.pathname === "/en"
+    ) {
         document.querySelector(".logo").src = "/img/logo-mono.png";
         window.addEventListener("scroll", function () {
             if (window.scrollY > 50) {
-                document
-                    .querySelector(".page-header")
-                    .classList.add("active");
+                document.querySelector(".page-header").classList.add("active");
                 document
                     .querySelectorAll(".header-link")
                     .forEach(function (link) {
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 document.querySelector(".logo").src = "/img/logo-color.png";
                 document.querySelector(".logo").style.width = "40%";
+                document.querySelector(".header-top").style.display = "none";
             } else {
                 document
                     .querySelector(".page-header")
@@ -28,15 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     .forEach(function (link) {
                         link.style.color = "";
                     });
+                document.querySelector(".header-top").style.display = "block";
             }
         });
     } else {
+        document.querySelector(".header-top").style.display = "none";
+        
         document.querySelector(".page-header").classList.add("active");
         document.querySelector(".logo").src = "/img/logo-color.png";
         document.querySelectorAll(".header-link").forEach(function (link) {
             link.style.color = "#312783";
         });
         document.querySelector(".logo").style.width = "40%";
+        document.querySelector(".side-lang").style.display = "block";
     }
 });
 
@@ -101,5 +107,3 @@ if ($(".brand-slider").length) {
         ],
     });
 }
-
-new PureCounter();

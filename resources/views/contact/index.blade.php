@@ -6,8 +6,8 @@
         {{-- @include('partial.page-title', [
             'image' => asset('assets/images/banner-about.jpg'),
         ]) --}}
-        <div class="hero-image" style="background-image: url('{{asset("img/bg-1.png")}}')">
-            <img class="waves" src="{{asset('img/waves.png')}}" alt="">
+        <div class="hero-image" style="background-image: url('{{ asset('img/bg-1.png') }}')">
+            <img class="waves" src="{{ asset('img/waves.png') }}" alt="">
         </div>
 
         <section class="bloc-about sp-1 my-5">
@@ -16,7 +16,7 @@
 
                     <div class="col-md-6 col-lg-6 mr-auto">
                         <div class="row">
-                            <img src="{{asset('img/oni.png')}}" alt="">
+                            <img src="{{ asset('img/oni.png') }}" alt="">
                         </div>
                     </div>
 
@@ -26,8 +26,8 @@
                             <div class="row ">
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="text" class="form-control" id="fullName"
-                                        placeholder="contact fullname">
-                                    <label for="floatingInput">fullname</label>
+                                        placeholder="{{ __('contact.input_fullname	') }}">
+                                    <label for="floatingInput">{{ __('contact.input_fullname') }}</label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-floating  col-md-6 mb-3">
@@ -57,11 +57,11 @@
                             </div>
 
                             <button type="submit"
-                                class="btn btn-primary text-white contact-button">Send</button>
+                                class="btn btn-primary text-white contact-button">{{ __('contact.contatc_button') }}</button>
                         </form>
 
                     </div>
-                    
+
                 </div>
             </div>
         </section>

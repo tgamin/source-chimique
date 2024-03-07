@@ -9,7 +9,7 @@
 
 @foreach ($sections as $section)
     @php
-        $output = filterStyleAttributes($section->getTranslatedAttribute('content', app()->getLocale(), 'fr'));
+        $content = filterStyleAttributes($section->getTranslatedAttribute('content', app()->getLocale(), 'fr'));
     @endphp
 
     @if ($page->slug == 'home')
@@ -26,9 +26,9 @@
                 <img class="sec-img col-6" src="{{ Voyager::image($section->image) }}" alt="">
                 <div class="section-text col-md-6">
 
-                    <h1 class="text-start">{{ $section->title }}</h1>
+                    <h1 class="text-start">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
 
-                    <div class="text-start">{!! $section->content !!}</div>
+                    <div class="text-start">{!! $content !!}</div>
 
                     <a href="/qui_sommes_nous">En savoir plus <svg class="small-arrow" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px">
@@ -119,9 +119,9 @@
             <section class="right-img container d-flex">
                 <div class="row">
                     <div class="left-content col-md-6">
-                        <h1 class="section-title">{{ $section->title }}</h1>
+                        <h1 class="section-title">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
                         <div class="paragraph-container left-p">
-                            {!! $section->content !!}
+                            {!! $content !!}
                         </div>
                     </div>
                     <div class="img-container col-md-6 d-flex justify-content-start">
@@ -137,9 +137,9 @@
                         <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
                     </div>
                     <div class="col-md-6">
-                        <h1 class="section-title">{{ $section->title }}</h1>
+                        <h1 class="section-title">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
                         <div class="paragraph-container right-p">
-                            {!! $section->content !!}
+                            {!! $content !!}
                         </div>
                     </div>
                 </div>
