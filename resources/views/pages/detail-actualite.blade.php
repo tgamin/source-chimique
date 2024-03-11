@@ -20,7 +20,7 @@
             width: 400px;
             height: 400px;
             border-radius: 12px;
-            box-shadow: 0px 4px 20px 0px rgba(140, 149, 159, 0.3);
+            box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 30%);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;

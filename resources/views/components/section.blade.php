@@ -117,7 +117,7 @@
 
         @if ($section->type == 'img-right')
             <section class="right-img container d-flex">
-                <div class="row">
+                <div class="row ">
                     <div class="left-content col-md-6">
                         <h1 class="section-title">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
                         <div class="paragraph-container left-p">

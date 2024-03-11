@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector(".logo").src = "/img/logo-color.png";
                 document.querySelector(".logo").style.width = "40%";
                 document.querySelector(".header-top").style.display = "none";
+                document.querySelector(".header-top").classList.remove("d-flex");
             } else {
+                document.querySelector(".header-top").classList.add("d-flex");
                 document
                     .querySelector(".page-header")
                     .classList.remove("active");
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     } else {
         document.querySelector(".header-top").style.display = "none";
+        document.querySelector(".header-top").classList.add("d-none");
         
         document.querySelector(".page-header").classList.add("active");
         document.querySelector(".logo").src = "/img/logo-color.png";

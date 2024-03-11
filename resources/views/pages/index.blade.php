@@ -10,7 +10,6 @@
 @endsection
 
 @section('content')
-
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach ($heros as $hero)
@@ -47,41 +46,77 @@
         </button>
     </div>
 
-
     @include('components.section', [$page])
 
     <section class="third-sec" style="background-image: url('/img/bg-3.png');">
         <img class="waves-2" src="/img/waves-2.png" alt="waves">
-        <div class="container icons-container">
-            <div class="icons-text">
-                <img class="icons" src="/img/international.png" alt="">
-                <h1><span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
-                        class="purecounter"></span> PAYS
-                    <p>Distributions</p>
-                </h1>
+        {{-- <div class="container icons-container d-flex justify-content-center flex-wrap position-relative">
+            <div class="row justify-content-center">
+                <div class="icons-text col-md-3 col-sm-6 mx-auto">
+                    <img class="icons" src="/img/international.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                            class="purecounter"></span> PAYS
+                        <p>Distributions</p>
+                    </h1>
+                </div>
+                <div class="icons-text col-md-3 col-sm-6 mx-auto">
+                    <img class="icons" src="/img/network.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                            class="purecounter"></span><br>
+                        <p>Collaborateurs</p>
+                    </h1>
+                </div>
+                <div class="icons-text col-md-3 col-sm-6 mx-auto">
+                    <img class="icons" src="/img/strategy.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                            class="purecounter"></span> ANS <br>
+                        <p>D'existence</p>
+                    </h1>
+                </div>
+                <div class="icons-text col-md-3 col-sm-6 mx-auto">
+                    <img class="icons" src="/img/industrial.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+                            class="purecounter"></span>k m2<br>
+                        <p>Espace couvert</p>
+                    </h1>
+                </div>
             </div>
-            <div class="icons-text">
-                <img class="icons" src="/img/network.png" alt="">
-                <h1><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
-                        class="purecounter"></span><br>
-                    <p>Collaborateurs</p>
-                </h1>
-            </div>
-            <div class="icons-text">
-                <img class="icons" src="/img/strategy.png" alt="">
-                <h1><span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
-                        class="purecounter"></span> ANS <br>
-                    <p>D'existence</p>
-                </h1>
-            </div>
-            <div class="icons-text">
-                <img class="icons" src="/img/industrial.png" alt="">
-                <h1><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
-                        class="purecounter"></span>k m2<br>
-                    <p>Espace couvert</p>
-                </h1>
+        </div> --}}
+
+        <div class="container">
+            <div class="icons-contin d-flex position-relative justify-content-center">
+                <div class="symbol">
+                    <img class="icons" src="/img/international.png" alt="">
+                    <h1>
+                        <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                            class="purecounter"></span> PAYS
+                        <p>Distributions</p>
+                    </h1>
+                </div>
+                <div class="symbol">
+                    <img class="icons" src="/img/network.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                            class="purecounter"></span><br>
+                        <p>Collaborateurs</p>
+                    </h1>
+                </div>
+                <div class="symbol">
+                    <img class="icons" src="/img/strategy.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                            class="purecounter"></span> ANS <br>
+                        <p>D'existence</p>
+                    </h1>
+                </div>
+                <div class="symbol">
+                    <img class="icons" src="/img/industrial.png" alt="">
+                    <h1><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+                            class="purecounter"></span>k m2<br>
+                        <p>Espace couvert</p>
+                    </h1>
+                </div>
             </div>
         </div>
+
     </section>
 
     @include('components.articles')

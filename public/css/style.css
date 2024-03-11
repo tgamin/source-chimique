@@ -47,7 +47,8 @@ p {
 .lang-btn:hover {
     background: transparent;
     border: 1px;
-    padding: 2px;
+    /* padding: 2px; */
+    margin-left: 10px;
 }
 
 .lang-dropdown.show {
@@ -77,6 +78,17 @@ p {
 .submenu-link {
     color: white;
     padding: 8px 14px;
+}
+
+/* new header */
+.offcanvas-content {
+    max-width: 70vw;
+    padding: 0 0.8rem;
+    background-color: var(--dark_blue);
+}
+
+.burger-menu:focus {
+    border: none;
 }
 
 @media all and (min-width: 992px) {
@@ -111,7 +123,7 @@ p {
     position: relative;
     height: 750px;
     margin-top: 100px;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -184,7 +196,7 @@ p {
 @media (max-width: 768px) {
     .hero-text-container h1 {
         font-size: 1.4rem;
-        margin-top: 60vh;
+        margin-top: 20vh;
     }
 
     .hero-text-container h2 {
@@ -375,19 +387,17 @@ a.nav-link.dropdown-toggle.header-link {
     width: auto;
 }
 
-.icons-container {
-    width: 100%;
-    align-items: center;
-    display: flex; /* justify-content: center; */
-    justify-content: space-evenly;
-    position: relative;
+.icons {
+    height:6rem;
+    width:6rem;
+    margin-bottom: 6px;
+    margin-left: 1rem;
 }
 
-.icons {
-    /* width: 100px; */
-    width: 5rem;
-    height: auto;
-    margin-bottom: 6px;
+@media (max-width:768px) {
+    .icons {
+        margin-left: 0.2rem;
+    } 
 }
 
 .icons-text {
@@ -410,6 +420,17 @@ a.nav-link.dropdown-toggle.header-link {
 .icons-text h1 p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+.icons-contin {
+    column-gap: 7rem;
+    row-gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.symbol> h1 {
+    color: white;
+    text-align: center;
 }
 
 .fourth-sec {
@@ -448,8 +469,8 @@ a.nav-link.dropdown-toggle.header-link {
 } */
 
 .img-contain {
-    height: 212px;
-    /* min-width: 294px; */
+    /* height: 212px; */
+    width: 100%;
     background-color: #6b6b6c;
     border-radius: 10px;
     overflow: hidden;
@@ -500,12 +521,14 @@ a.nav-link.dropdown-toggle.header-link {
     font-size: 12px;
     color: #bfb8b0;
     margin-right: 14px;
+    display: none;
 }
 
 .card-span {
     text-transform: uppercase;
     font-size: 12px;
     color: #bfb8b0;
+    display: none;
 }
 
 .card-title {
@@ -517,8 +540,14 @@ a.nav-link.dropdown-toggle.header-link {
 .card-text {
     margin-top: 5px;
     font-size: 18px;
-    font-weight: 600;
-    color: var(--orange);
+    font-weight: 500;
+    color: black;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Adjust this value to the number of lines you want to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .actualites-carousel {
