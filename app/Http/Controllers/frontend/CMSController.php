@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Brand;
 use App\Card;
+use App\Carousel;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
 use Illuminate\Http\Request;
@@ -21,12 +22,12 @@ class CMSController extends Controller
     {
         // $filter = $child_slug == null  ? $slug : $child_slug ;
         // $page = Page::active()->whereTranslation('slug',$filter)->firstOrFail();
-        
         $page = Page::active()->whereTranslation('slug',$slug)->firstOrFail();
+        $heros= Carousel::all();
         $brands = Brand::all();
         $cards = Card::all();
 
-        return view('frontend.cms.index', compact('page', 'brands', 'cards'));
+        return view('frontend.cms.index', compact('heros', 'page', 'brands', 'cards'));
     }
 
 }

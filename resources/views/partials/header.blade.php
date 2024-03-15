@@ -14,7 +14,7 @@
             </svg>
         </a>
         <div class="dropdown lang-btn">
-            <a class="p-0 btn dropdown-toggle text-white border-0" href="#" role="button"
+            <a class="p-0 m-0 text-start btn dropdown-toggle text-white border-0" href="#" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 {{ LaravelLocalization::getCurrentLocaleNative() }}
             </a>
@@ -29,9 +29,9 @@
                 @endforeach
             </ul>
         </div>
-    
+
     </div>
-    <nav class="navbar container navbar-expand-lg bg-body-tertiary bg-transparent">
+    <nav class="navbar container navbar-dark navbar-expand-lg bg-body-tertiary bg-transparent">
         <a class="navbar-brand" href="/"><img class="logo" src="/img/logo-mono.png" alt="Source Chimiques logo"
                 width=""></a>
         <button class="navbar-toggler burger-menu" type="button" data-toggle="collapse" data-bs-toggle="offcanvas"
@@ -42,12 +42,29 @@
         <div class="offcanvas offcanvas-content offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
             aria-labelledby="navbarOffcanvasLgLabel">
 
-            <ul class="navbar-nav mr-auto justify-content-end">
+            <ul class="navbar-nav mt-4 mt-md-0 justify-content-end">
                 {{ menu('main', 'partials.menu') }}
+                <div class="dropdown lang-btn side-lang">
+                    <a class="nav-link text-start btn dropdown-toggle border-0 text-black-50" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ LaravelLocalization::getCurrentLocaleNative() }}
+                    </a>
+                    <ul class="dropdown-menu lang-dropdown">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li class="px-2">
+                                <a rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
             </ul>
+
         </div>
 
-        <ul class="side-lang navbar-nav">
+        {{-- <ul class="side-lang navbar-nav">
             <div class="dropdown lang-btn">
                 <a class="nav-link btn dropdown-toggle border-0 text-black-50" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,6 +81,6 @@
                     @endforeach
                 </ul>
             </div>
-        </ul>
+        </ul> --}}
     </nav>
 </header>

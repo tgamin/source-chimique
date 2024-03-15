@@ -7,7 +7,7 @@
         }
 
         .paragraph-container.right-p {
-            width: 40vw;
+            width: 95%;
             font-size: 1.2rem;
         }
 

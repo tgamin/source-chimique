@@ -27,30 +27,30 @@
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="text" class="form-control" id="fullName"
                                         placeholder="{{ __('contact.input_fullname	') }}">
-                                    <label for="floatingInput">{{ __('contact.input_fullname') }}</label>
+                                    <label class="contact-label" for="floatingInput">{{ __('contact.input_fullname') }}</label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                                         placeholder="E-mail">
-                                    <label for="floatingInput">E-mail</label>
+                                    <label class="contact-label" for="floatingInput">E-mail</label>
                                 </div>
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="text" class="form-control" id="phone" placeholder="Tel :">
-                                    <label for="floatingInput">Tel </label>
+                                    <label class="contact-label" for="floatingInput">Tel </label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-floating  col-md-6 mb-3">
                                     <input type="text" class="form-control" id="objet"
                                         placeholder="{{ __('contact.input_subject') }}">
-                                    <label for="floatingInput">{{ __('contact.input_subject') }}</label>
+                                    <label class="contact-label" for="floatingInput">{{ __('contact.input_subject') }}</label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                                 <div class="form-floating  col-md-12 mb-3 ">
                                     <textarea style="height: 100px" name="message" id="floatingTextarea" class="form-control" placeholder="Message">
                                     
                                 </textarea>
-                                    <label for="floatingTextarea">Message</label>
+                                    <label class="contact-label" for="floatingTextarea">Message</label>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
 

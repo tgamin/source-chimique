@@ -17,8 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector(".logo").style.width = "40%";
                 document.querySelector(".header-top").style.display = "none";
                 document.querySelector(".header-top").classList.remove("d-flex");
+                document.querySelector(".navbar").classList.remove("navbar-dark");
+
             } else {
                 document.querySelector(".header-top").classList.add("d-flex");
+                document.querySelector(".navbar").classList.add("navbar-dark");
+
                 document
                     .querySelector(".page-header")
                     .classList.remove("active");
@@ -38,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         document.querySelector(".header-top").style.display = "none";
         document.querySelector(".header-top").classList.add("d-none");
+        document.querySelector(".navbar").classList.remove("navbar-dark");
         
         document.querySelector(".page-header").classList.add("active");
         document.querySelector(".logo").src = "/img/logo-color.png";
@@ -77,6 +82,7 @@ if ($(".brand-slider").length) {
     $(".brand-slider").slick({
         infinite: true,
         slidesToShow: 5,
+        draggable: false,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
