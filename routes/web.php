@@ -61,9 +61,10 @@ Route::group([
     Route::get('mot_du_president', [ProposController::class, 'mot']);
     Route::get('actualites', [ProposController::class, 'actualite']);
     Route::get('actualites/{id}', [ProposController::class, 'show'])->name('card.show');
-    Route::get('contact', function () {
-        return view('contact.index');
-    })->name('contact');
+    Route::get('contact', [ProposController::class, 'contact']);
+    // Route::get('contact', function () {
+    //     return view('contact.index');
+    // })->name('contact');
     Route::get('/{slug}', [CMSController::class, 'index']);
 });
 

@@ -51,6 +51,14 @@ class ProposController extends Controller
         $brands =Brand::all();
 
         return view('pages.detail-actualite', compact('article', 'cards', 'page', 'brands'));
+    
+    }
+
+    public function contact() {
+        $slug = 'contact';
+        $page = Page::active()->whereTranslation('slug',$slug)->firstOrFail();
+
+        return view('contact.index', compact('page'));
     }
 
 }

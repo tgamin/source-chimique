@@ -169,9 +169,8 @@ p {
 }
 
 .carousel-img {
-    height: 750px;
     /* height: 530px; */
-    height: 43rem;
+    /* height: 750px; */
     width: 100%;
     background-position: center;
     background-size: cover;

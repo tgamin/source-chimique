@@ -17,7 +17,8 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach ($page->gallery as $slider)
-            <div class="carousel-item active carousel-img" style="background-image: url('{{ asset($slider["url"]) }}');">
+            <div class="carousel-item active carousel-img h-auto">
+                <img src="{{ asset($slider["url"]) }}" alt="" style="width:100vw">
 
                 <img class="waves" src="/img/waves.png" alt="waves">
                 <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">

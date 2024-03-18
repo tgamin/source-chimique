@@ -13,8 +13,8 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach ($heros as $hero)
-                <div class="carousel-item active carousel-img"
-                    style="background-image: url('{{ Voyager::image($hero->carousel_img) }}');">
+                <div class="carousel-item active carousel-img mt-0"
+                    style="background-image: url('{{ Voyager::image($hero->carousel_img) }}'); height: 750px;">
                     <img class="waves" src="/img/waves.png" alt="waves">
                     <img class="logo-notch" src="/img/logo-notch.png" alt="logo-notch">
 
