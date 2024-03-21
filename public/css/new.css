@@ -43,20 +43,16 @@ section.container {
   margin-top: 4rem;
 }
 
-.sec-img {
-  /* width: 440px; */
-}
-
 .left-img .sec-img {
-  height: 600px;
+  /* height: 600px; */
   width: auto;
   position: sticky;
   top: 100px;
 }
 
 .right-img .sec-img {
-  margin-left: 5rem;
-  height: 600px;
+  /* margin-left: 5rem; */
+  /* height: 600px; */
   width: auto;
 }
 

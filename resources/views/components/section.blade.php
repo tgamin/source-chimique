@@ -30,8 +30,9 @@
 
                     <div class="text-start">{!! $content !!}</div>
 
-                    <a href="/qui_sommes_nous">En savoir plus <svg class="small-arrow" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px">
+                    <a href="/qui_sommes_nous">{{ __('section.en_savoir_plus') }}<svg class="small-arrow"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
+                            height="10px">
                             <image x="0px" y="0px" width="10px" height="10px"
                                 xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDBoQGAyqSqxiAAAAXklEQVQY073QMRGEMBgF4R0URMJJ+KUgIY4iIRJOSgYF4ADqbUKT4Y6Wgld+2z1sVgDD1eA3q90Khrv7C6lc6TMNTgSwAEFi4xhss5vBbLeZHjBcPN8YLOZxyfePOQHRxXr4by8N/QAAAABJRU5ErkJggg==" />
                         </svg>
@@ -117,15 +118,16 @@
 
         @if ($section->type == 'img-right')
             <section class="right-img container d-flex">
-                <div class="row ">
-                    <div class="left-content col-md-6">
-                        <h1 class="section-title">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
+                <div class="row">
+                    <div class="img-container col-md-6 order-md-2 order-1 d-flex justify-content-start">
+                        <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
+                    </div>
+                    <div class="left-content col-md-6 order-md-1 order-2">
+                        <h1 class="section-title">
+                            {{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
                         <div class="paragraph-container left-p">
                             {!! $content !!}
                         </div>
-                    </div>
-                    <div class="img-container col-md-6 d-flex justify-content-start">
-                        <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
                     </div>
                 </div>
             </section>
@@ -137,7 +139,8 @@
                         <img class="sec-img" src="{{ Voyager::image($section->image) }}" alt="">
                     </div>
                     <div class="col-md-6">
-                        <h1 class="section-title">{{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
+                        <h1 class="section-title">
+                            {{ $section->getTranslatedAttribute('title', app()->getLocale(), 'fr') }}</h1>
                         <div class="paragraph-container right-p">
                             {!! $content !!}
                         </div>

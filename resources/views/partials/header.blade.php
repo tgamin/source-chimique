@@ -33,7 +33,7 @@
     </div>
     <nav class="navbar container navbar-dark navbar-expand-lg bg-body-tertiary bg-transparent">
         <a class="navbar-brand" href="/"><img class="logo" src="/img/logo-mono.png" alt="Source Chimiques logo"
-                width=""></a>
+                {{-- width="" --}}></a>
         <button class="navbar-toggler burger-menu" type="button" data-toggle="collapse" data-bs-toggle="offcanvas"
             data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

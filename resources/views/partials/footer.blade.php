@@ -44,9 +44,9 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-3 mb-50">
                     <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="/"><img src="{{asset('img/logo-mono.png')}}" class="img-fluid" alt="logo"></a>
-                        </div>
+                        <ul>
+                            <a href="/"><img class="footer-logo" src="{{asset('img/logo-mono.png')}}" class="img-fluid" alt="logo"></a>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 mb-30">

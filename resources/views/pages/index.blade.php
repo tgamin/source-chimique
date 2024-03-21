@@ -85,33 +85,33 @@
 
         <div class="container">
             <div class="icons-contin d-flex position-relative justify-content-center">
-                <div class="symbol">
+                <div class="symbol d-flex flex-column align-items-center">
                     <img class="icons" src="/img/international.png" alt="">
                     <h1>
                         <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
-                            class="purecounter"></span> PAYS
-                        <p>Distributions</p>
+                            class="purecounter"></span> {{ __('icons.pays') }}
+                        <p>{{ __('icons.distributions') }}</p>
                     </h1>
                 </div>
-                <div class="symbol">
+                <div class="symbol d-flex flex-column align-items-center">
                     <img class="icons" src="/img/network.png" alt="">
                     <h1><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
                             class="purecounter"></span><br>
-                        <p>Collaborateurs</p>
+                        <p>{{ __('icons.collaborateurs') }}</p>
                     </h1>
                 </div>
-                <div class="symbol">
+                <div class="symbol d-flex flex-column align-items-center">
                     <img class="icons" src="/img/strategy.png" alt="">
                     <h1><span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
-                            class="purecounter"></span> ANS <br>
-                        <p>D'existence</p>
+                            class="purecounter"></span> {{ __('icons.ans') }} <br>
+                        <p>{{ __('icons.d_existence') }}</p>
                     </h1>
                 </div>
-                <div class="symbol">
+                <div class="symbol d-flex flex-column align-items-center">
                     <img class="icons" src="/img/industrial.png" alt="">
                     <h1><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
                             class="purecounter"></span>k m2<br>
-                        <p>Espace couvert</p>
+                        <p>{{ __('icons.espace_couvert') }}</p>
                     </h1>
                 </div>
             </div>

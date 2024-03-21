@@ -1,7 +1,7 @@
 <section class="fourth-sec">
     <img class="waves-3" src="{{asset('img/waves-3.png')}}" alt="waves">
     <div class="container d-flex justify-content-center position-relative mt-3">
-        <h1 class="title">Soyez informés des dernières actualités</h1>
+        <h1 class="title">{{ __('articles.informes')}}</h1>
     </div>
     <div class="actualites-carousel container">
         @foreach ($cards as $card)
