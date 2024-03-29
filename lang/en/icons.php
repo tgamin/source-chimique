@@ -7,4 +7,5 @@ return array (
   'collaborateurs' => 'Collaborators',
   'd_existence' => 'Of Existence',
   'espace_couvert' => 'Covered space',
+  'marques' => 'Brands',
 );

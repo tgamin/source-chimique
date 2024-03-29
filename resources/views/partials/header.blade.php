@@ -13,6 +13,7 @@
                 </path>
             </svg>
         </a>
+        {{--old lang btn 
         <div class="dropdown lang-btn">
             <a class="p-0 m-0 text-start btn dropdown-toggle text-white border-0" href="#" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,7 +29,18 @@
                     </li>
                 @endforeach
             </ul>
-        </div>
+        </div> --}}
+        <ul class="lang d-inline-block mb-0">
+            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <li class="lang-li">
+                    <a class="text-white text-uppercase px-1 @if (app()->getLocale() == $localeCode) font-weight-bold text-underline @endif "
+                        rel="alternate" hreflang="{{ $localeCode }}"
+                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $localeCode }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
 
     </div>
     <nav class="navbar container navbar-dark navbar-expand-lg bg-body-tertiary bg-transparent">
@@ -44,8 +56,9 @@
 
             <ul class="navbar-nav mt-4 mt-md-0 justify-content-end">
                 {{ menu('main', 'partials.menu') }}
-                <div class="dropdown lang-btn side-lang">
-                    <a class="nav-link text-start btn dropdown-toggle border-0 text-black-50" href="#" role="button"
+                <div class="dropdown lang-btn side-lang pt-2">
+                    {{-- old lang button
+                        <a class="nav-link text-start btn dropdown-toggle border-0 text-black-50" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ LaravelLocalization::getCurrentLocaleNative() }}
                     </a>
@@ -55,6 +68,17 @@
                                 <a rel="alternate" hreflang="{{ $localeCode }}"
                                     href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul> --}}
+                    <ul>
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li class="lang-li">
+                                <a class="text-uppercase px-1 @if (app()->getLocale() == $localeCode) font-weight-bold text-underline @endif "
+                                    rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $localeCode }}
                                 </a>
                             </li>
                         @endforeach

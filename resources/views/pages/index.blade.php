@@ -109,9 +109,9 @@
                 </div>
                 <div class="symbol d-flex flex-column align-items-center">
                     <img class="icons" src="/img/industrial.png" alt="">
-                    <h1><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
-                            class="purecounter"></span>k m2<br>
-                        <p>{{ __('icons.espace_couvert') }}</p>
+                    <h1><span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                            class="purecounter"></span><br>
+                        <p>{{ __('icons.marques') }}</p>
                     </h1>
                 </div>
             </div>

@@ -52,12 +52,9 @@
                 <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
                     <div class="footer-widget">
                         <ul>
-                            <li class=""><i class="bi bi-geo-alt"></i><span>46, bd. Abdelkrim El Khattabi
-                                    Casablanca,
-                                    20250 -
-                                    Maroc</span></li>
-                            <li><i class="bi bi-telephone"></i>+212 (0) 522 31 46 18</li>
-                            <li><i class="bi bi-envelope"></i>sc@sc.ma</li>
+                            <li class=""><i class="bi bi-geo-alt"></i><span>784 , Zone industrielle Sapino Nouaceur-Casablanca - Maroc</span></li>
+                            <li><i class="bi bi-telephone"></i>00212 522 339 960</li>
+                            <li><i class="bi bi-envelope"></i>contact@sourcechimiques.com</li>
                         </ul>
                     </div>
                 </div>

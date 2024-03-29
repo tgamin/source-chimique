@@ -41,7 +41,7 @@
 
                 <div class="col-md-6 col-lg-6 mr-auto">
                     <div class="row">
-                        <img src="{{ asset('img/oni.png') }}" alt="">
+                        <img src="{{ asset('img/contact-img.png') }}" alt="">
                     </div>
                 </div>
 
