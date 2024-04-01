@@ -24,6 +24,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::get('/foo', function () {
     Artisan::call('storage:link');
+    return 'storage-linked';
 });
 
 

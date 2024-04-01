@@ -16,8 +16,8 @@
                                 <p>{{ $card->card_date }}</p>
                                 <p>{{ $card->card_creator }}</p>
                             </div>
-                            <h3 class="card-title">{{ $card->card_title }}</h3>
-                            <h4 class="card-text">{{ $card->card_description }}</h4>
+                            <h3 class="card-title">{{ $card->getTranslatedAttribute('card_title', app()->getLocale(), 'fr') }}</h3>
+                            <h4 class="card-text">{{ $card->getTranslatedAttribute('card_description', app()->getLocale(), 'fr') }}</h4>
                         </div>
                     </div>
                 </div>

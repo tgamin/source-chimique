@@ -26,10 +26,10 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $card->card_title }}</h5>
+                                    <h5 class="card-title">{{ $card->getTranslatedAttribute('card_title', app()->getLocale(), 'fr') }}</h5>
                                     <div class="post-meta">
                                         <p class="card-text">
-                                            {{ $card->card_description }}
+                                            {{ $card->getTranslatedAttribute('card_description', app()->getLocale(), 'fr') }}
                                         </p>
                                     </div>
                                 </div>
